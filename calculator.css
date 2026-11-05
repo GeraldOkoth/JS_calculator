@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #212121;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 400px;
+  background-color: #e3e3e3;
+  margin: 1rem auto;
+  height: 94vh;
+  border-radius: 2rem;
+}
+
+.identity {
+  position: absolute;
+  top: 0.5rem;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 94%;
+}
+
+.upper {
+  margin: 2rem auto 10px;
+  padding: 0.5rem;
+  position: relative;
+  width: 94%;
+  height: 20%;
+  border-radius: inherit;
+  background-color: #202020;
+  color: #fff;
+}
+
+#expression {
+  padding: 0.5rem 1rem 15%;
+  width: 100%;
+  background-color: #232323;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  margin: 0.5rem auto;
+}
+
+.results {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.lower {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 10px auto;
+  padding: 1rem;
+  width: 94%;
+  height: 78%;
+  border-radius: inherit;
+  background-color: #252525;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+  color: #000;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.btn:hover {
+  background-color: #bbb;
+}
+
+.btn:active {
+  background-color: #e1e1e1;
+}
+
+.operators {
+  flex-basis: 10%;
+  display: grid;
+  background-color: #000000;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0.5rem;
+  border-radius: inherit;
+}
+
+.operator {
+  background-color: #ddd;
+}
+
+.numerics {
+  flex-basis: 78%;
+  display: grid;
+  background-color: #1a1a1a;
+  padding: 0.5rem;
+  border-radius: inherit;
+  justify-content: start;
+  align-content: start;
+  gap: 0.5rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.functions {
+  flex-basis: 10%;
+  display: grid;
+  padding: 0.5rem;
+  border-radius: inherit;
+  background-color: #1a1a1a;
+}

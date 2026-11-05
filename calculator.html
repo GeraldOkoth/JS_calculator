@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./calculator.css" />
+    <script type="module" src="calculator.js" defer></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <span class="identity">FX-900</span>
+      <div class="upper">
+        <input type="text" name="expression" id="expression" readonly />
+        <span class="results"></span>
+      </div>
+      <div class="lower">
+        <div class="operators">
+          <button class="btn operator" data-value="+">+</button>
+          <button class="btn operator" data-value="-">-</button>
+          <button class="btn operator" data-value="*">*</button>
+          <button class="btn operator" data-value="/">/</button>
+          <button class="btn function" data-value="=">=</button>
+        </div>
+        <div class="numerics">
+          <button class="btn numeric" data-value="9">9</button>
+          <button class="btn numeric" data-value="8">8</button>
+          <button class="btn numeric" data-value="7">7</button>
+          <button class="btn numeric" data-value="6">6</button>
+          <button class="btn numeric" data-value="5">5</button>
+          <button class="btn numeric" data-value="4">4</button>
+          <button class="btn numeric" data-value="3">3</button>
+          <button class="btn numeric" data-value="2">2</button>
+          <button class="btn numeric" data-value="1">1</button>
+          <button class="btn numeric" data-value="0">0</button>
+        </div>
+        <div class="functions">
+          <button class="btn clear-function" data-value="c">C</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
