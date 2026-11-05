@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("expression");
   const results = document.querySelector(".results");
+  const resultsArray = [];
 
   // append to input functionality
   const numericBtns = document.querySelectorAll(".numeric");
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const expression = input.value;
       const result = eval(expression);
       results.textContent = result;
+      resultsArray.push(result);
     } catch (error) {
       results.textContent = "Error: Invalid Expression";
     }
@@ -39,4 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
       results.textContent = "";
     }
   });
+
+  // display previous answer 
+  const answerBtn = document.querySelector(".answer-function");
+  
+  answerBtn.addEventListener("click", () => {
+    if (resultsArray.length > 0) {
+      const lastResult = resultsArray[resultsArray.length - 1];
+      results.textContent = lastResult;
+    }
+  })
 });

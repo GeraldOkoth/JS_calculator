@@ -25,10 +25,9 @@ body {
   border-radius: 2rem;
 }
 
-.identity {
+.title {
   position: absolute;
-  top: 0.5rem;
-  display: block;
+  top: 0.4rem;
   font-size: 1.2rem;
   font-weight: bold;
   width: 94%;
@@ -126,6 +125,7 @@ body {
 .functions {
   flex-basis: 10%;
   display: grid;
+  grid-template-columns: repeat(5, 1fr);
   padding: 0.5rem;
   border-radius: inherit;
   background-color: #1a1a1a;

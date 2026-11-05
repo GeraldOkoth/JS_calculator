@@ -9,7 +9,10 @@
   </head>
   <body>
     <div class="container">
-      <span class="identity">FX-900</span>
+      <div class="title">
+        <span class="identity">CASIO</span>
+        <span class="identity">fx-991</span>
+      </div>
       <div class="upper">
         <input type="text" name="expression" id="expression" readonly />
         <span class="results"></span>
@@ -33,9 +36,20 @@
           <button class="btn numeric" data-value="2">2</button>
           <button class="btn numeric" data-value="1">1</button>
           <button class="btn numeric" data-value="0">0</button>
+          <button class="btn numeric" data-value=".">.</button>
+          <button class="btn numeric" data-value="(">(</button>
+          <button class="btn numeric" data-value=")">)</button>
         </div>
         <div class="functions">
-          <button class="btn clear-function" data-value="c">C</button>
+          <button class="btn clear-function" data-value="c">AC</button>
+          <button
+            class="btn delete-function"
+            data-value="D"
+            onclick="alert('This feature is coming soon!')"
+          >
+            DEL
+          </button>
+          <button class="btn answer-function" data-value="a">ANS</button>
         </div>
       </div>
     </div>
