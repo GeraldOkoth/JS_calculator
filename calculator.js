@@ -42,13 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // display previous answer 
+  // display previous answer
   const answerBtn = document.querySelector(".answer-function");
-  
+
   answerBtn.addEventListener("click", () => {
     if (resultsArray.length > 0) {
       const lastResult = resultsArray[resultsArray.length - 1];
       results.textContent = lastResult;
     }
-  })
+  });
+
+  // delete previous character
+  const deleteBtn = document.querySelector(".delete-function");
+  deleteBtn.addEventListener("click", () => {
+    input.value = input.value.slice(0, -1);
+  });
 });
