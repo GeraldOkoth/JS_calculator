@@ -32,6 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+
+  // PI functionality
+  const piBtn = document.querySelector('.pi');
+
+  piBtn.addEventListener('click', () => {
+    input.value =+ Math.PI.toFixed(2);
+    
+  })
+
   // clear functionality
   const clearBtn = document.querySelector(".clear-function");
 
@@ -57,4 +66,5 @@ document.addEventListener("DOMContentLoaded", () => {
   deleteBtn.addEventListener("click", () => {
     input.value = input.value.slice(0, -1);
   });
+
 });
