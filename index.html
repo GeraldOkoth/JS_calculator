@@ -9,12 +9,12 @@
   </head>
   <body>
     <div class="container">
-      <div class="title">
+      <div class="calc-brand">
         <span class="identity">CASIO</span>
         <span class="identity">fx-991</span>
       </div>
-      <div class="upper">
-        <input type="text" name="expression" id="expression" readonly />
+      <div class="calc-upper">
+        <input type="text" name="input-expression" id="input-expression" readonly />
         <span class="results"></span>
       </div>
       <div class="lower">
@@ -46,7 +46,7 @@
           <button
             class="btn numeric"
             data-value="deg"
-            onclick="alert('This feature is coming soon!')"
+            
           >
             deg
           </button>
@@ -127,12 +127,7 @@
           >
             ^
           </button>
-          <button
-            class="btn numeric pi"
-            data-value="pi"
-          >
-            π
-          </button>
+          <button class="btn numeric pi" data-value="pi">π</button>
           <button
             class="btn numeric"
             data-value="e"
@@ -143,12 +138,7 @@
         </div>
         <div class="functions">
           <button class="btn clear-function" data-value="c">AC</button>
-          <button
-            class="btn delete-function"
-            data-value="D"
-          >
-            DEL
-          </button>
+          <button class="btn delete-function" data-value="D">DEL</button>
           <button class="btn answer-function" data-value="a">ANS</button>
         </div>
       </div>
