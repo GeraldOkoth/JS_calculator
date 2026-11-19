@@ -14,20 +14,25 @@
         <span class="identity">fx-991</span>
       </div>
       <div class="calc-upper">
-        <input type="text" name="input-expression" id="input-expression" readonly />
+        <input
+          type="text"
+          name="input-expression"
+          id="input-expression"
+          readonly
+        />
         <span class="results"></span>
       </div>
-      <div class="lower">
+      <div class="switch-btn">
+        <span class="switch">switch</span>
+        <span class="switch"><img src="./icons/swap.svg" alt="" /></span>
+      </div>
+      <div class="calc-lower">
         <div class="operators">
           <button class="btn operator" data-value="+">+</button>
           <button class="btn operator" data-value="-">-</button>
           <button class="btn operator" data-value="*">*</button>
           <button class="btn operator" data-value="/">/</button>
           <button class="btn function equal-btn" data-value="=">=</button>
-        </div>
-        <div class="switch-btn-txt">
-          <span class="switch">switch</span>
-          <span class="switch"><img src="./icons/swap.svg" alt="" /></span>
         </div>
         <div class="numerics">
           <button class="btn numeric" data-value="9">9</button>
@@ -43,13 +48,7 @@
           <button class="btn numeric" data-value=".">.</button>
           <button class="btn numeric" data-value="(">(</button>
           <button class="btn numeric" data-value=")">)</button>
-          <button
-            class="btn numeric"
-            data-value="deg"
-            
-          >
-            deg
-          </button>
+          <button class="btn numeric" data-value="deg">deg</button>
           <button
             class="btn numeric"
             data-value="rad"
