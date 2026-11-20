@@ -22,17 +22,27 @@
         />
         <span class="results"></span>
       </div>
-      <div class="switch-btn">
-        <span class="switch">switch</span>
-        <span class="switch"><img src="./icons/swap.svg" alt="" /></span>
+      <div class="icons">
+        <div class="switch-btn">
+          <span class="switch">switch</span>
+          <span class="switch"><img src="./icons/swap.svg" alt="switch-button" /></span>
+        </div>
+        <span class="chat-overlay"><img src="./icons/more_horiz.svg">
       </div>
       <div class="calc-lower">
-        <div class="operators">
-          <button class="btn operator" data-value="+">+</button>
-          <button class="btn operator" data-value="-">-</button>
-          <button class="btn operator" data-value="*">*</button>
-          <button class="btn operator" data-value="/">/</button>
-          <button class="btn function equal-btn" data-value="=">=</button>
+        <div class="functions">
+          <div class="operators">
+            <button class="btn operator" data-value="+">+</button>
+            <button class="btn operator" data-value="-">-</button>
+            <button class="btn operator" data-value="*">*</button>
+            <button class="btn operator" data-value="/">/</button>
+            <button class="btn function equal-btn" data-value="=">=</button>
+          </div>
+          <div class="special-operations">
+            <button class="btn clear-function" data-value="c">AC</button>
+            <button class="btn delete-function" data-value="D">DEL</button>
+            <button class="btn answer-function" data-value="a">ANS</button>
+          </div>
         </div>
         <div class="numerics">
           <button class="btn numeric" data-value="9">9</button>
@@ -135,11 +145,7 @@
             e
           </button>
         </div>
-        <div class="functions">
-          <button class="btn clear-function" data-value="c">AC</button>
-          <button class="btn delete-function" data-value="D">DEL</button>
-          <button class="btn answer-function" data-value="a">ANS</button>
-        </div>
+        <div class="chat-box"></div>
       </div>
     </div>
   </body>

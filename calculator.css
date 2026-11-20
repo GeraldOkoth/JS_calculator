@@ -74,10 +74,15 @@ body {
   cursor: pointer;
 }
 
+.open-overlay {
+  float: right;
+  cursor: pointer;
+}
+
 .calc-lower {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction: row;
+  gap: 1rem;
   overflow: hidden;
   padding: 1rem;
   width: 100%;
@@ -86,14 +91,50 @@ body {
   background-color: var(--theme-black);
 }
 
+.functions {
+  display: inherit;
+  flex-direction: column;
+  border-radius: inherit;
+  background-color: #535353;
+  flex-basis: 20%;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
 .operators {
   display: grid;
+  flex-basis: 50%;
+  grid-template-columns: repeat(2, 1fr);
   background-color: #000;
+  padding: 1rem;
+  gap: 0.2rem;
+  border-radius: inherit;
+}
+
+.special-operations {
+  flex-basis: 50%;
+  display: grid;
+  gap: 0.2rem;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: #000;
+  padding: 1rem;
+  border-radius: inherit;
+}
+
+.numerics {
+  flex-basis: 60%;
+  display: grid;
+  background-color: #535353;
   padding: 0.5rem;
   border-radius: inherit;
+  gap: 0.2rem;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
-  flex-basis: 10%;
+}
+
+.chat-box {
+  flex-basis: 30%;
+  background-color: #535353;
+  border-radius: inherit;
 }
 
 .btn {
@@ -110,41 +151,41 @@ body {
   height: auto;
 }
 
-.equal-btn {
-  background-color: var(--theme-primary);
-}
-
 .btn:hover {
-  background-color: hsl(0, 0%, 33%);
+  background-color: hsl(0, 0%, 27%);
 }
 
 .btn:active {
-  background-color: hsl(0, 11%, 7%);
+  background-color: hsl(0, 0%, 49%);
+}
+
+.equal-btn {
+  background-color: var(--theme-primary);
 }
 
 .operator {
   color: #ff9102;
 }
 
-.numerics {
-  flex-basis: 78%;
-  display: grid;
-  background-color: #535353;
-  padding: 0.5rem;
-  border-radius: inherit;
-  justify-content: start;
-  align-content: start;
-  gap: 0.5rem;
-  box-shadow: 2px 2px 10px 0px #080808;
-  grid-template-columns: repeat(5, 1fr);
-}
+@media screen and (max-width: 768px) {
+  .calc-lower {
+    flex-direction: column;
+  }
 
-.functions {
-  flex-basis: 10%;
-  display: grid;
-  box-shadow: 2px 2px 10px 0px #080808;
-  grid-template-columns: repeat(5, 1fr);
-  padding: 0.5rem;
-  border-radius: inherit;
-  background-color: #535353;
+  .functions {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .special-operations,
+  .operators {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.5rem;
+  }
+
+  .numerics {
+    flex-basis: 80%;
+  }
+  .chat-box {
+    display: none;
+  }
 }

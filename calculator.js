@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("input-expression");
   const results = document.querySelector(".results");
+  const chatOverlay = document.getElementsByClassName('.chat-overlay');
   const resultsArray = [];
+
+  // chatOverlay.addEventListener('click', () => {
+
+  // })
 
   // append to input functionality
   const numericBtns = document.querySelectorAll(".numeric");
@@ -20,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // calculate funtionality
-  const calculateBtn = document.querySelector('.function[data-value="="]');
+  const calculateBtn = document.querySelector('.function[data-value="="]"');
   const sinBtn = document.querySelector(".sin");
   const cosBtn = document.querySelector(".cos");
   const tanBtn = document.querySelector(".tan");
@@ -47,6 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
       results.textContent = "Error: Invalid Expression";
     }
   });
+
+  // degree to celcius conversion
+  // function toCelsius(fahrenheit) {
+  //   return (5 / 9) * (fahrenheit - 32);
+  // }
 
   // PI functionality
   const piBtn = document.querySelector(".pi");
