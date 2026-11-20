@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const chatOverlay = document.getElementsByClassName('.chat-overlay');
   const resultsArray = [];
 
-  // chatOverlay.addEventListener('click', () => {
-
-  // })
+  chatOverlay.addEventListener('click', () => {
+    
+  })
 
   // append to input functionality
   const numericBtns = document.querySelectorAll(".numeric");
@@ -68,8 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // clear functionality
   const clearBtn = document.querySelector(".clear-function");
 
-  clearBtn.addEventListener("click", () => {
-    if (confirm("Are you sure you want to clear the input?")) {
+  clearBtn.addEventListener("click", () => { {
       input.value = "";
       results.textContent = "";
     }

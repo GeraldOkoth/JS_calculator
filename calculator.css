@@ -67,16 +67,17 @@ body {
   right: 1rem;
 }
 
-.switch-btn {
+.icons {
   color: var(--theme-color);
-  display: inline-flex;
-  gap: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
   cursor: pointer;
 }
 
-.open-overlay {
-  float: right;
-  cursor: pointer;
+.switch-btn {
+  display: inline-flex;
+  gap: 0.5rem;
 }
 
 .calc-lower {
@@ -132,9 +133,12 @@ body {
 }
 
 .chat-box {
+  position: relative;
+  padding: 1rem;
   flex-basis: 30%;
   background-color: #535353;
   border-radius: inherit;
+  color: var(--theme-color);
 }
 
 .btn {
@@ -149,6 +153,38 @@ body {
   border: none;
   cursor: pointer;
   height: auto;
+}
+
+.input-submit input[type="text"], .btn-submit {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 2.5rem;
+}
+
+.input-submit {
+  position: absolute;
+  bottom: 1rem;
+  width: 90%;
+}
+
+.input-submit input[type="text"] {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  background-color: #302f2f;
+}
+
+.btn-submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
 }
 
 .btn:hover {
@@ -168,6 +204,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    margin: 0.6rem auto .02rem;
+  }
   .calc-lower {
     flex-direction: column;
   }
@@ -186,6 +225,6 @@ body {
     flex-basis: 80%;
   }
   .chat-box {
-    display: none;
+    /* display: none; */
   }
 }
