@@ -221,7 +221,8 @@ body {
 
 @media screen and (max-width: 768px) {
   .container {
-    margin: 0.6rem auto 0.02rem;
+    bottom: 2rem;
+    margin: 0.6rem auto;
   }
   .calc-lower {
     flex-direction: column;
