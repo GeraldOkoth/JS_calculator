@@ -231,7 +231,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .container {
-    height: 94%;
+    height: 92%;
   }
   .calc-lower {
     flex-direction: column;
@@ -254,10 +254,15 @@ body {
     display: block;
   }
   .chat-box {
+    transition: all 0.3s ease-in-out;
     position: absolute;
     top: 0%;
     left: 0;
-    display: none;
+    transition:
+      opacity 0.3s ease,
+      visibility 0s linear 0.3s;
+    opacity: 0;
+    visibility: hidden;
     margin: 0 auto;
     height: 100%;
   }
