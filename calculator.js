@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("input-expression");
   const results = document.querySelector(".results");
+  const calcUpper = document.querySelector('.calc-upper');
+  const span = document.createElement('span');
+  span.id = 'angle_Mode';
+  const angle_Mode = document.getElementById('angle_Mode');
   const resultsArray = [];
   let angleMode = "deg";
 
@@ -24,9 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (value === "deg") {
         angleMode = "deg";
         results.textContent = "DEG";
+        angle_Mode.textContent = 'deg';
+        calcUpper.appendChild(angle_Mode);
       } else if (value === "rad") {
         angleMode = "rad";
         results.textContent = "RAD";
+        angle_Mode.textContent = 'rad';
       } else if (value === "pi") {
         appendExpression("pi");
       } else if (["sin", "cos", "tan", "sec", "csc", "cot", "ln", "log", "sqrt"].includes(value)) {

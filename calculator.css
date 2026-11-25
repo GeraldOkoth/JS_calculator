@@ -2,8 +2,9 @@
 
 :root {
   --theme-primary: #ff7b00;
-  --theme-color: #fff;
-  --theme-black: #212121;
+  --theme-textColor: #d3daff;
+  --theme-grey: #212121;
+  --theme-black: #000;
 }
 
 * {
@@ -23,9 +24,9 @@ body {
 /* desktop view */
 .container {
   margin: 0.6rem auto;
-  background-color: #000;
+  background-color: var(--theme-black);
   width: 96%;
-  height: 96%;
+  height: 98%;
   border-radius: 1rem;
   position: relative;
   display: flex;
@@ -34,18 +35,18 @@ body {
 }
 
 .calc-brand {
-  color: var(--theme-color);
+  color: var(--theme-textColor);
   font-weight: bold;
 }
 
 .calc-upper {
   width: 100%;
   margin: 1rem auto;
-  background-color: var(--theme-black);
+  background-color: var(--theme-grey);
   border-radius: inherit;
-  height: 20%;
+  height: 18%;
   position: relative;
-  color: var(--theme-color);
+  color: var(--theme-textColor);
 }
 
 #input-expression {
@@ -53,11 +54,24 @@ body {
   width: 100%;
   outline: none;
   background-color: #232323;
-  color: var(--theme-color);
+  color: var(--theme-textColor);
   border: none;
   height: 100%;
   font-size: 1.5rem;
   border-radius: inherit;
+}
+
+#angle_Mode {
+  position: absolute;
+  color: var(--theme-textColor);
+  font-size: 0.6rem;
+  background-color: #000;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  top: 0.2rem;
+  right: 0.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .results {
@@ -67,20 +81,21 @@ body {
 }
 
 .icons {
-  color: var(--theme-color);
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  cursor: pointer;
+  align-items: center;
 }
 
 .switch-btn {
   display: inline-flex;
   gap: 0.5rem;
+  color: var(--theme-textColor);
+  cursor: pointer;
 }
 
 .chat-overlay {
   display: none;
+  cursor: pointer;
 }
 
 .calc-lower {
@@ -93,7 +108,37 @@ body {
   width: 100%;
   height: 78%;
   border-radius: inherit;
-  background-color: var(--theme-black);
+  background-color: var(--theme-grey);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #302f2f;
+  color: var(--theme-textColor);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  height: auto;
+}
+
+.btn:hover {
+  background-color: hsl(0, 0%, 27%);
+}
+
+.btn:active {
+  background-color: hsl(0, 0%, 49%);
+}
+
+.equal-btn {
+  background-color: var(--theme-primary);
+}
+
+.operator {
+  color: #ff9102;
 }
 
 .functions {
@@ -106,7 +151,8 @@ body {
   gap: 1rem;
 }
 
-.operators {
+.operators,
+.special-operations {
   display: grid;
   flex-basis: 50%;
   grid-template-columns: repeat(2, 1fr);
@@ -117,13 +163,7 @@ body {
 }
 
 .special-operations {
-  flex-basis: 50%;
-  display: grid;
-  gap: 0.2rem;
   grid-template-columns: repeat(1, 1fr);
-  background-color: #000;
-  padding: 1rem;
-  border-radius: inherit;
 }
 
 .numerics {
@@ -143,7 +183,7 @@ body {
   width: 100%;
   background-color: #535353;
   border-radius: inherit;
-  color: var(--theme-color);
+  color: var(--theme-textColor);
 }
 
 .chat-message {
@@ -154,20 +194,6 @@ body {
   border-radius: inherit;
   background-color: #000;
   width: 70%;
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #302f2f;
-  color: var(--theme-color);
-  border-radius: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  height: auto;
 }
 
 .input-submit input[type="text"],
@@ -203,26 +229,9 @@ body {
   background-color: transparent;
 }
 
-.btn:hover {
-  background-color: hsl(0, 0%, 27%);
-}
-
-.btn:active {
-  background-color: hsl(0, 0%, 49%);
-}
-
-.equal-btn {
-  background-color: var(--theme-primary);
-}
-
-.operator {
-  color: #ff9102;
-}
-
 @media screen and (max-width: 768px) {
   .container {
-    bottom: 2rem;
-    margin: 0.6rem auto;
+    height: 94%;
   }
   .calc-lower {
     flex-direction: column;
